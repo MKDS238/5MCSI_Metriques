@@ -9,21 +9,21 @@ from datetime import datetime
 from urllib.request import urlopen
 
 import sqlite3
- 
+
 app = Flask(__name__)
- 
+
 @app.route('/')
 
 def hello_world():
 
     return render_template('hello.html') #comm2
- 
+
 @app.route("/contact/")
 
 def MaPremiereAPI():
 
     return render_template("forms.html")
- 
+
 @app.route('/tawarano/')
 
 def meteo():
@@ -51,13 +51,14 @@ def meteo():
 def mongraphique():
 
     return render_template("graphique.html")
- 
+
 @app.route("/histogramme/")
 
 def histogramme():
 
     return render_template("histogramme.html")
-
+ 
+ 
 if __name__ == "__main__":
 
   app.run(debug=True)
